@@ -4,3 +4,7 @@ This repository contains simple codes and functions often used in NGS (next Gen 
 ## 1. Bulk download sequences from NCBI using python
 
 folder called python_download_sequences
+
+## 2. Split multi-sample multi-chromosome vcf file by chromosomes
+
+vcf_to_chr.sh file
