@@ -1,0 +1,48 @@
+# Sequence Downloader Script
+
+This Python script downloads sequences from the NCBI Nucleotide database using RefSeq accession numbers and saves them to a specified directory. It utilizes the Biopython library to interact with the NCBI Entrez system and retrieve the sequences.
+
+## Prerequisites
+
+- Python 3.x
+- Biopython library (`pip install biopython`)
+
+## Usage
+
+1. Clone this repository or download the script to your local machine.
+2. Install the required dependencies by running `pip install biopython`.
+3. Prepare your input file with RefSeq accession numbers and corresponding names. The file should be formatted as follows:
+
+    ```
+    	NZ_OX366387	genome1
+	NZ_OX366397	genome2
+
+    ...
+    ```
+
+4. Edit the script to set your email address for the `Entrez.email` field.
+5. Run the script using the command: `python sequence_downloader.py`.
+6. The script will download sequences in FASTA format and save them in the specified output directory.
+
+## Script Details
+
+- `input_file`: Path to the text file containing RefSeq accession numbers and names.
+- `output_directory`: Directory where downloaded sequences will be saved.
+- The script uses the Biopython library to fetch sequences from the NCBI Nucleotide database.
+- Sequences are downloaded in the FASTA format and saved with names in the format `name_accession.fasta`.
+
+## Example
+
+Suppose you have an input file named `accession_list.txt`:
+
+NZ_OX366387	genome1
+NZ_OX366397	genome2
+
+
+
+After running the script, the downloaded sequences will be saved in the `downloaded.sequences` directory as `Genome1_NZ_OX366387.fasta` and `Genome2_NZ_OX366397.fasta`.
+
+## Notes
+
+- Ensure that your RefSeq accession numbers are correct and valid. These usually start with a two letter alphabetic code followed by '_' followed by a unique number. This may have versions denoted as .1 or .2 or .3 in the end of the name
+- Make sure your email address is provided to the `Entrez.email` field for NCBI usage tracking. Make an NCBI account if you don't have one already
