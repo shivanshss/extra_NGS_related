@@ -5,6 +5,35 @@ This repository contains simple codes and functions often used in NGS (next Gen 
 
 folder called python_download_sequences
 
+NCBI Sequence Downloader
+
+This Python script is designed to download nucleotide sequences from the NCBI database using accession numbers. It uses the Biopython library to interact with the NCBI Entrez system and fetch sequences in FASTA format. Accession numbers and corresponding names are provided in a text file, and the script downloads the sequences and saves them as FASTA files.
+
+Usage:
+
+    Ensure you have Python 3.x installed on your system.
+    Install the Biopython library if you haven't already. You can do this using the command: pip install biopython.
+    Replace "your_email_address" in the script with your actual email address. This is required by NCBI Entrez.
+    Prepare a text file with accession numbers and names in tab-separated format. Example: accession_list.txt.
+    Set the input_file variable in the script to the path of your input file (e.g., input_file = "/path/to/accession_list.txt").
+    Specify the output_directory where you want to save the downloaded sequences.
+    Run the script using the command: python script_name.py.
+
+Script Functionality:
+
+    The script utilizes the provided Biopython library and NCBI Entrez API to fetch sequences by accession numbers.
+    Accession numbers and corresponding names are read from the input file.
+    The script attempts to download sequences for each accession number and saves them as individual FASTA files in the specified output directory.
+    If any errors occur during the download process, appropriate messages are displayed.
+
+Note:
+
+    This script assumes that you have access to the NCBI Entrez system and that the provided accession numbers are valid.
+    Make sure to replace "your_email_address" with your actual email address to comply with NCBI's usage policy.
+    The script requires Biopython to be installed, which can be done using the command: pip install biopython.
+
+Feel free to use this script to conveniently download nucleotide sequences from NCBI using accession numbers for your research purposes.
+
 ## 2. Split multi-sample multi-chromosome vcf file by chromosomes
 
 vcf_to_chr.sh file
