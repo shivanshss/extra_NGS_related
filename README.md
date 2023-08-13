@@ -3,7 +3,7 @@ This repository contains simple codes and functions often used in NGS (next Gen 
 
 ## 1. Bulk download sequences from NCBI using python
 
-folder called python_download_sequences
+folder called [python_download_sequences](https://github.com/shivanshss/extra_NGS_related/tree/main/python_download_sequences_NCBI)
 
 NCBI Sequence Downloader
 
