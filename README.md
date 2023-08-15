@@ -234,3 +234,84 @@ This script calculates the transition/transversion ratio (R) between two given D
 The provided script calculates the probability that, in a population of N diploid individuals initially possessing m copies of a dominant allele, after g generations, at least k copies of a recessive allele will be observed. It uses the Wright-Fisher model, and the function calculate_probability computes the probability based on the binomial distribution. The sample input values N, m, g, and k are provided as an example. You can replace them with your own values and run the script to calculate and print the corresponding probability.
 
 
+## 35.Counting DNA Nucleotides
+[DNA.py](https://github.com/shivanshss/extra_NGS_related/blob/main/learning_python_Rosalind/DNA/DNA.py)
+This script reads a DNA string from a FASTA file and calculates the counts of 'A', 'C', 'G', and 'T' symbols in the string. The count_symbols function calculates the counts, and the process_fasta_file function processes the input FASTA file, extracts sequences, and prints the symbol counts for each sequence.
+
+## 36. Transcribing DNA into RNA
+[RNA.py](https://github.com/shivanshss/extra_NGS_related/blob/main/learning_python_Rosalind/RNA/RNA.py)
+This script reads DNA strings from a multi-FASTA file and transcribes them into RNA sequences. The transcribe_dna_to_rna function replaces 'T' with 'U' to perform the transcription. The process_multi_fasta_file function processes the multi-FASTA file, extracts sequences, and prints the corresponding transcribed RNA sequences.
+
+## 37. reverse complement of a DNA string
+[REVC.py](https://github.com/shivanshss/extra_NGS_related/blob/main/learning_python_Rosalind/REVC/REVC.py)
+This script reads DNA sequences from a multi-FASTA file, calculates the reverse complement for each sequence, and writes the reverse complements to an output FASTA file. The reverse_complement function calculates the reverse complement of a DNA string using the given complement dictionary.
+
+
+## 38. Rabbits and Recurrence Relations
+[FIB.py](https://github.com/shivanshss/extra_NGS_related/blob/main/learning_python_Rosalind/FIB/FIB.py)
+The script uses the Fibonacci-like recurrence relation to calculate the total number of rabbit pairs after n months, considering the provided reproduction rules. Here's how the script works:
+
+    The function rabbit_pairs(n, k) takes two parameters: n (the number of months) and k (the number of offspring pairs produced by each reproduction-age pair).
+
+    The function starts by handling the base cases. If n is 1 or 2, there will be only one pair of rabbits in the population for both cases.
+
+    For months beyond the base cases (i.e., when n is greater than 2), the script uses an iterative approach to calculate the total number of rabbit pairs.
+
+    The variables prev_prev, prev, and current are used to keep track of the number of pairs for the current month, the previous month, and two months ago, respectively.
+
+    The loop runs from the 3rd month (i starts from 3) up to the desired n month.
+
+    In each iteration, the number of pairs for the current month is calculated using the recurrence relation: current = prev + k * prev_prev.
+
+    The values of prev_prev and prev are updated to move to the next iteration.
+
+    Once the loop completes, the variable current holds the total number of rabbit pairs after n months.
+
+    The script returns the final value of current.
+
+    Example usage is provided at the end of the script. You input values for n and k using input(), and the script calculates and prints the result.
+
+
+## 39. Computing GC Content
+[GC.py](https://github.com/shivanshss/extra_NGS_related/blob/main/learning_python_Rosalind/GC/GC.py)
+The script calculates the GC-content of DNA sequences in FASTA format, identifies the sequence with the highest GC-content, and outputs its ID along with the calculated percentage.
+
+
+## 40. Mendel's First Law
+[IPRB.py](https://github.com/shivanshss/extra_NGS_related/blob/main/learning_python_Rosalind/IPRB/IPRB.py)
+The script calculates the probability of producing an individual with a dominant allele phenotype from a population containing homozygous dominant (k), heterozygous (m), and homozygous recessive (n) organisms. It reads input values from a file, computes the probability for each set of values, and outputs the results in tab-separated format.
+
+## 41. Translating RNA into Protein
+[PROT.py](https://github.com/shivanshss/extra_NGS_related/blob/main/learning_python_Rosalind/PROT/PROT.py)
+The script converts RNA sequences into protein sequences based on the codon table. It reads sequences from a multi-FASTA file, translates each RNA sequence to a protein sequence, and prints the results with labels.
+
+## 42. Finding a Motif in DNA
+[SUBS.py](https://github.com/shivanshss/extra_NGS_related/blob/main/learning_python_Rosalind/SUBS/SUBS.py)
+The script takes two input files, each containing strings separated by newlines. It then finds the locations of the second string (t) within each of the first strings (s) and prints the locations in space-separated format.
+
+
+## 43. Consensus and Profile
+[CONS.py](https://github.com/shivanshss/extra_NGS_related/blob/main/learning_python_Rosalind/CONS/CONS.py)
+The script aligns a collection of DNA strings using pairwise alignment, then builds a profile matrix from the aligned sequences, and generates a consensus string based on the profile. The consensus and profile are then printed.
+
+
+## 44. Mortal Fibonacci Rabbits
+[FIBD.py](https://github.com/shivanshss/extra_NGS_related/blob/main/learning_python_Rosalind/FIBD/FIBD.py)
+This script calculates the total number of rabbit pairs in a population after n months, considering a dynamic programming approach. It reads input data from a CSV file containing pairs of values n and m, representing the number of months and the lifespan of a rabbit pair, respectively. It then calculates the total number of pairs using the provided function rabbit_pairs_after_n_months, and writes the results to an output text file.
+
+
+## 45. Overlap Graphs
+[GRPH.py](https://github.com/shivanshss/extra_NGS_related/blob/main/learning_python_Rosalind/GRPH/GRPH.py)
+This script generates an overlap graph from a collection of DNA strings. It reads input data from a FASTA file containing DNA sequences, and then constructs an overlap graph by comparing the last k characters of one string with the first k characters of another string. If an overlap is found, an edge is added to the adjacency list. The output is a list of edges representing the adjacency relationships in the overlap graph.
+
+## 46. Calculating Expected Offspring
+[IEV.py](https://github.com/shivanshss/extra_NGS_related/blob/main/learning_python_Rosalind/IEV/IEV.py)
+This script calculates the expected number of offspring displaying the dominant phenotype given the number of individuals for each genotype pairing in a population. It reads input data from a text file containing the counts of homozygous dominant, heterozygous, and homozygous recessive genotypes, as well as the probabilities of producing offspring with dominant phenotypes for each genotype pairing. The output is the expected number of offspring displaying the dominant phenotype.
+
+
+## 47. Finding a Shared Motif
+[LCSM.py](https://github.com/shivanshss/extra_NGS_related/blob/main/learning_python_Rosalind/LCSM/LCSM.py)
+This script finds the longest common substring that is present in all the given DNA strings. It reads input data from a FASTA file containing DNA sequences and extracts the sequences to find the longest common substring. The output is the longest common substring that is shared among all the input DNA sequences.
+
+
+
