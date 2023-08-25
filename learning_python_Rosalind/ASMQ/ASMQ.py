@@ -18,32 +18,41 @@ def calculate_l_statistic(contigs, l_value):
             return idx
 
 
-def process_file(filename):
-    contigs = []
+def process_fasta(filename):
+    contig_lengths = []
+    current_sequence = ""
+
     with open(filename, 'r') as file:
         for line in file:
             line = line.strip()
-            if line:
-                contigs.append(line)
+            if line.startswith(">"):
+                if current_sequence:
+                    contig_lengths.append(len(current_sequence))
+                    current_sequence = ""
+            else:
+                current_sequence += line
 
-    n50 = calculate_n_statistic(contigs, 50)
-    n75 = calculate_n_statistic(contigs, 75)
-    total_genome_size = sum(len(contig) for contig in contigs)
-    l50 = calculate_l_statistic(contigs, total_genome_size * 0.5)
+        if current_sequence:  # To handle the last sequence in the file
+            contig_lengths.append(len(current_sequence))
+
+    n50 = calculate_n_statistic(contig_lengths, 50)
+    n75 = calculate_n_statistic(contig_lengths, 75)
+    total_genome_size = sum(contig_lengths)
+    l50 = calculate_l_statistic(contig_lengths, total_genome_size * 0.5)
 
     return n50, n75, l50, total_genome_size
 
 def main():
-    input_filename = input("path to input file")
-    output_filename = input("path to output file")
+    input_filename = input("Enter the input filename: ")
+    output_filename = input("Enter the output filename: ")
 
     with open(input_filename, 'r') as input_file, open(output_filename, 'w') as output_file:
         output_file.write("File Name\tN50\tN75\tL50\tTotal Genome Size\n")
 
         for line in input_file:
-            dna_file = line.strip()
-            n50, n75, l50, genome_size = process_file(dna_file)
-            output_file.write(f"{dna_file}\t{n50}\t{n75}\t{l50}\t{genome_size}\n")
+            fasta_file = line.strip()
+            n50, n75, l50, genome_size = process_fasta(fasta_file)
+            output_file.write(f"{fasta_file}\t{n50}\t{n75}\t{l50}\t{genome_size}\n")
 
     print("Statistics written to", output_filename)
 
