@@ -1,11 +1,11 @@
-# DNA Sequence Statistics Calculator
+# DNA assembly Statistics Calculator
 
 This script calculates N50, N75, L50, and total genome size from a collection of FASTA files. It reads a list of FASTA file names, processes the sequences, and outputs the statistics in a tabular format.
 
 ## Usage:
 
     Create an input file "fasta_files.txt" with a list of FASTA filenames, one per line.
-    Run the script and provide the input filename and desired output filename.
+    Change the script to and add input and output file names. (Changed to be interactive, it would ask for file names upon running)
     The output file will contain a table with FASTA file names, N50, N75, L50, and total genome size.
 
 ## Instructions:
