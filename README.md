@@ -77,6 +77,8 @@ The given script calculates the probabilities that a randomly selected individua
 
 This script calculates the N50 and N75 statistics for a collection of DNA strings. It takes a set of DNA strings as input and calculates the lengths of contigs that contribute to 50% and 75% of the total combined length. Adjust the input strings accordingly, and then run the script to obtain the N50 and N75 values for the provided collection.
 
+This script now also calculates L50 and total genome size. It takes a list of file names (file of filenames) with path to a genome in each row of the file. 
+
 
 ## 6. Global Multiple Alignment
 [CLUS.py](https://github.com/shivanshss/extra_NGS_related/blob/main/learning_python_Rosalind/CLUS/CLUS.py) 
