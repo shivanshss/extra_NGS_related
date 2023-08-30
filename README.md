@@ -36,7 +36,7 @@ Feel free to use this script to conveniently download nucleotide sequences from 
 
 ## 2. Split multi-sample multi-chromosome vcf file by chromosomes
 
-[vcf_to_chr.sh](https://github.com/shivanshss/extra_NGS_related/blob/main/vcf_to_chr.sh) file
+[vcf_to_chr.sh](https://github.com/shivanshss/extra_NGS_related/blob/main/split_vcf/vcf_to_chr.sh) file
 
 Split VCF by Chromosome
 
