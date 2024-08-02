@@ -1,4 +1,0 @@
-LGY	/home/bloodmark/workarea/new_final_chr/chrY/y_chr_scaff.fasta	/home/bloodmark/workarea/pubref/pubref_chromosomes/LGY.fa
-TCON	/home/bloodmark/workarea/new_final_chr/tcas6_final_all.fasta	/home/bloodmark/workarea/tcon2/ncbi_dataset/data/GCA_019155225.1/GCA_019155225.1_Tcon_1.0_genomic.fna
-TFREE	/home/bloodmark/workarea/new_final_chr/tcas6_final_all.fasta	/home/bloodmark/workarea/tfree/ncbi_dataset/data/GCA_939628115.1/GCA_939628115.1_Tfree1.0_genomic.fna
-
